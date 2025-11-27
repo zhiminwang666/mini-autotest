@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# pytest cache
+.pytest_cache/
+
+# reports / logs
+report.html
+autotest.log
