@@ -37,6 +37,17 @@ jobs:
           source .venv/bin/activate
           pytest -q --html=report.html --self-contained-html --alluredir=allure-results
 
+      - name: Generate Allure HTML report
+        run: |
+          npm install -g allure-commandline --save-dev
+          allure generate allure-results -o allure-report --clean
+
+      - name: Deploy Allure report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: allure-report
+
       - name: Upload HTML report
         uses: actions/upload-artifact@v4
         with:
