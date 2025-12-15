@@ -1,0 +1,5 @@
+base_url: "https://httpbin.org"
+login_endpoint: "/post"
+timeout: 3
+username: "test_user"
+password: "test_pass"

@@ -10,3 +10,5 @@ __pycache__/
 # reports / logs
 report.html
 autotest.log
+allure-results/
+logs/
